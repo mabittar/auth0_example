@@ -6,11 +6,11 @@ This is a Python application developed with FastAPI focusing on demonstrating lo
 
 Before starting the application, the developer will need to create an account at https://auth0.com/ and start an authentication application of the regular web application type. After this initial step, they should configure the basic config as shown in:
 
-![Auth0 Basic Config](https://github.com/ma_bittar/auth0_example/blob/master/asset/auth0_basic.jpg?raw=true)
+![Auth0 Basic Config](https://github.com/mabittar/auth0_example/blob/develop/assets/auth0_basic.jpg?raw=true)
 
 And also configure the allowed callback URI, as shown in:
 
-![Auth0 Callback URI Config](https://github.com/ma_bittar/auth0_example/blob/master/asset/auth0_config.png)
+![Auth0 Callback URI Config](https://github.com/mabittar/auth0_example/blob/develop/assets/auth0_config.png?raw=true)
 
 To generate the `APP_SECRET_KEY` environment variable, execute the following command in the shell: `openssl rand -hex 32` (for Windows, a similar command can be used, such as `openssl rand -hex 32`). The `AUTHORIZED_EMAIL` variable will be the only email allowed access to the application after user validation.
 
@@ -29,11 +29,11 @@ Este é um exemplo de aplicação em Python usando o framework FastAPI para demo
 
 Antes de iniciar, certifique-se de ter uma conta no [Auth0](https://auth0.com/) e criar uma aplicação de autenticação do tipo "regular web application". Após isso, siga as instruções abaixo para configurar o ambiente e executar a aplicação.
 
-![Auth0 Basic Config](https://github.com/ma_bittar/auth0_example/blob/master/asset/auth0_basic.jpg?raw=true)
+![Auth0 Basic Config](https://github.com/mabittar/auth0_example/blob/develop/assets/auth0_basic.jpg?raw=true)
 
 Configure também a URI de callback para:
 
-![Auth0 Callback URI Config](https://github.com/ma_bittar/auth0_example/blob/master/asset/auth0_config.png)
+![Auth0 Callback URI Config](https://github.com/mabittar/auth0_example/blob/develop/assets/auth0_config.png?raw=true)
 
 Para gerar a variável de ambiente `APP_SECRET_KEY`, execute o seguinte comando no terminal: `openssl rand -hex 32` (para Windows, um comando similar pode ser usado, como `openssl rand -hex 32`). A variável `AUTHORIZED_EMAIL` será o único e-mail permitido a acessar a aplicação após a validação do usuário.
 
