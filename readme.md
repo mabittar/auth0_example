@@ -1,5 +1,7 @@
 # FastAPI Login with Auth0
 
+![Simplified OAUTH2](https://testdriven.io/static/images/blog/oauth-python/web_auth_flow.png)
+
 ## English
 
 This is a Python application developed with FastAPI focusing on demonstrating login using the third-party site Auth0.
