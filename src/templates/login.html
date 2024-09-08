@@ -1,0 +1,39 @@
+<!-- login.html -->
+
+{% extends 'base.html' %} {% block title %}Auth0 APP - Login{% endblock %} {%
+block content %}
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+{% if error_message %}
+<div class="alert alert-warning" role="alert">{{ error_message }}</div>
+{% endif %}
+<section class="login-block">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="auth-box card">
+          <div class="card-block text-center"> <!-- Adicionando a classe text-center aqui -->
+            <div class="col-md-12">
+              <h3 class="text-center heading">
+                Faça o login com um e-mail válido
+              </h3>
+            </div>
+            <a
+              class="btn btn-lg btn-google btn-block text-uppercase btn-outline"
+              href="/login"
+              ><img
+                src="https://img.icons8.com/color/48/000000/google-logo.png"
+                style="height: 40px; width: 40px; margin-right: 10px"
+              />Login com Google</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script
+  src="https://apis.google.com/js/platform.js?onload=renderButton"
+  async
+  defer
+></script>
+{% endblock %}

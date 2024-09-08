@@ -1,0 +1,65 @@
+exclude: .*migrations\/.*
+repos:
+# basic
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-toml
+    -   id: debug-statements
+
+- repo: https://github.com/pycqa/isort
+  rev: 5.13.2
+  hooks:
+    - id: isort
+      name: isort (python)
+      args: ["--profile", "black","--filter-files"]
+      language: python_venv
+      exclude: ^/__init__\.py$
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.1.5
+  hooks:
+    - id: ruff
+      name: ruff (python)
+      args: [--fix, --exit-non-zero-on-fix, --show-fixes]
+    - id: ruff-format
+
+#black
+-   repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+    - id: black
+      name: black
+      args: # arguments to configure black
+        - --line-length=88
+        - --include='\.pyi?$'
+        # these folders wont be formatted by black
+        - --exclude="""\.git |
+          \.__pycache__|
+          \.hg|
+          \.mypy_cache|
+          \.tox|
+          \.venv|
+          _build|
+          buck-out|
+          build|
+          dist"""
+
+#flake8
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+    - id: flake8
+      name: flake8
+      args: # arguments to configure flake8
+        # making isort line length compatible with black
+        - "--max-line-length=120"
+        - "--max-complexity=18"
+        - "--select=B,C,E,F,W,T4,B9"
+        # these are errors that will be ignored by flake8
+        # check out their meaning here
+        # https://flake8.pycqa.org/en/latest/user/error-codes.html
+        - "--ignore=C0114, C0115, C0116, C0200, C0303, W0613, W504, E0110, E0213, E0402, E1101, E1120, E1123"

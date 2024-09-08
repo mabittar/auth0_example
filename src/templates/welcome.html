@@ -1,0 +1,15 @@
+<!-- welcome.html -->
+
+{% extends 'base.html' %} {% block title %}Bem-vindo ao Nosso Site!{% endblock
+%} {% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Bem-vindo!</h1>
+  <p class="lead">Você fez login com sucesso na nossa aplicação.</p>
+  <hr class="my-4" />
+  <p>Aproveite todos os recursos disponíveis.</p>
+  <p>Usuário: {{ user_email }}</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button"
+    >Em Desenvolvimento</a
+  >
+</div>
+{% endblock %}
